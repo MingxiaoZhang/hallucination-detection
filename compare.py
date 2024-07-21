@@ -3,7 +3,7 @@ from sentence_transformers import util
 import torch
 
 def compare(ground_truth, llm_output): 
-    word_model = WordModel('bert-large-cased')
+    word_model = WordModel()
     ground_truth_word_embedding = word_model.encode(ground_truth)
     llm_output_word_embedding = word_model.encode(llm_output)
     

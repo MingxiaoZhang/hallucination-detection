@@ -20,9 +20,8 @@ class SentenceModel():
         return output
     
 class WordModel():
-    def __init__(self, model_name):
+    def __init__(self):
         print("Loading word embedding model.")
-        self.model_name = model_name
         self.word2vec = api.load("glove-wiki-gigaword-300")
     def encode(self, text):
         print("Processing word encoding.")
